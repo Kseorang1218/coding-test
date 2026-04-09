@@ -1,12 +1,11 @@
 def solution(numbers, target):
-    def dfs(idx, val):
+    def dfs(idx, tot):
         if idx == len(numbers):
-            if val == target:
-                return 1
+            if tot == target:
+                return 1 
             else:
                 return 0
-        return dfs(idx+1, val+numbers[idx])+dfs(idx+1, val-numbers[idx])
+        return dfs(idx+1, tot+numbers[idx]) + dfs(idx+1, tot-numbers[idx])
     
-    answer = dfs(0, 0)
-    
+    answer = dfs(0,0)
     return answer
