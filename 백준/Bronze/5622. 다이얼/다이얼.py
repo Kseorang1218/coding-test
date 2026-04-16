@@ -8,4 +8,5 @@ for n in num_input:
         if n in num_lst[i][1]:
             time = num_lst[i][0]+1
             tot+=time
+            break
 print(tot)
