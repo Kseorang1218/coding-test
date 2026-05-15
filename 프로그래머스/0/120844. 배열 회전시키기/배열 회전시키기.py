@@ -1,8 +1,7 @@
 def solution(numbers, direction):
     answer = []
     if direction == "right":
-        answer += [numbers.pop(len(numbers)-1)] + numbers
+        answer += [numbers[-1]] + numbers[:-1]
     else:
-        tmp = numbers.pop(0)
-        answer += numbers + [tmp]
+        answer += numbers[1:] + [numbers[0]]
     return answer
